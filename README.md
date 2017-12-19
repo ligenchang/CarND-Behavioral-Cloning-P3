@@ -2,6 +2,12 @@
 
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
+[//]: # (Image References)
+
+[image1]: ./examples/placeholder.png "Model Visualization"
+[image2]: ./examples/center.jpg "Center"
+[image3]: ./examples/turn.jpg "Turn"
+
 Overview
 ---
 This repository contains all files submitted for the Behavioral Cloning Project.
@@ -32,7 +38,7 @@ Here is the model description I used for this project. So the full model includi
 
 _________________________________________________________________
 Layer (type)                 Output Shape              Param #   
-=================================================================
+________________________________________________________________
 lambda_1 (Lambda)            (None, 160, 320, 3)       0         
 _________________________________________________________________
 cropping2d_1 (Cropping2D)    (None, 65, 320, 3)        0         
@@ -70,7 +76,7 @@ _________________________________________________________________
 dense_4 (Dense)              (None, 10)                510       
 _________________________________________________________________
 dense_5 (Dense)              (None, 1)                 11        
-=================================================================
+________________________________________________________________
 Total params: 1,595,511
 Trainable params: 1,595,511
 Non-trainable params: 0
@@ -82,6 +88,15 @@ Training data preparation is not easy. However, it's critical for this project. 
 * Fristly, I drive one lap with anti-clockwise at average speed 4-6 mph and tested it and realized the data is not enough. The car is easily went out of the track.
 * Then I drive another lap with clockwise and merged the data. I find that the result improved a lot. It only went out of track sometimes in the turning corner. 
 * Then I decided to add more traing data for the turning point only. After that, the car seems can run in the track, but sometimes it still went to the side and not in the middle.
+
+Here is an example image of center lane driving:
+
+![alt text][image2]
+
+This is the image captured for turning.
+
+![alt text][image3]
+
 
 Data augmentation
 ---
